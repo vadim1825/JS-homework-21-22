@@ -1,0 +1,1 @@
+var pow=function(o,r){for(var n=o,p=1;p<r;p++)n*=o;return n},n,x;n<=1?alert("Степень "+n+"не поддерживается, введите целую степень, большую 1"):console.log(pow(x,n)),module.exports=pow;var x=prompt("введите целое число большее, меньшее или равное 0",""),n=prompt("Введите степень числа","");

@@ -1,0 +1,156 @@
+@import 'bootstrap.scss';
+
+@import 'bootstrap-theme.scss';
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	background: #c2c2c2;
+}
+
+/*white background for test*/
+
+.backwhite {
+	height: 600px;
+	width: 1000px;
+	margin: 30px auto;
+	background: white;
+	border: solid 1px black;
+	padding: 20px 70px 40px 70px;
+}
+
+/*title*/
+
+.header {
+	text-align: center;
+	font-size: 18px;
+	margin-bottom: 40px;
+}
+
+/*styles for marked list*/
+
+.marked {
+	font-size: 18px;
+}
+
+/*styles for unmarked list*/
+
+.unmarked {
+	list-style: none;
+}
+
+.unmarked label {
+	font-weight: 500;
+	font-size: 16px;
+	margin-bottom: 0px;
+}
+
+/*styles for the button which checks the answers*/
+
+.button {
+	display: block;
+	margin: 0px auto;
+    margin-top: 80px;
+	height: 35px;
+	width: 300px;
+	background: #b1dcfc;
+	border: solid 2px black;
+	font-size: 18px;
+}
+
+/*styles and engine for customized checkboxes*/
+
+input {
+	display: none;
+}
+
+input + label {
+	cursor: pointer;
+}
+
+input + label::before {
+	content: "";
+	display: inline-block;
+	height: 16px;
+	width: 16px;
+	margin-right: 5px;
+	background-image: url(../../img/sprite.png);
+	background-repeat: no-repeat;
+}
+
+input:checked + label::before {
+	background-position: -16px 0px;
+}
+
+/*color for wrong answers*/
+
+.red {
+	color: red;
+}
+
+/*color for right answers*/
+
+.green {
+	color: green;
+}
+
+/*styles for modal window*/
+
+.modal_wrapper {
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    left: 415px;
+    top: -310px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    box-shadow: 0px 2px 2px 2px black;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/*styles for title in modal window*/
+
+.result_title {
+	text-align: center;
+	margin-top: 30px;
+	color: white;
+	font-size: 20px;
+}
+
+/*styles for text in modal window if answers wrong*/
+
+.wrong_result,
+.wrong_under_result {
+    text-align: center;
+    padding-top: 20px;
+    color: red;
+    font-size: 24px;
+}
+
+/*styles for text in modal window if answers right*/
+
+.right_result {
+    text-align: center;
+    padding-top: 60px;
+    color: green;
+    font-size: 24px;
+}
+
+/*styles for button in modal window*/
+
+.refresh {
+	display: block;
+    margin: 40px auto 0px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.refresh a {
+	text-decoration: none;
+}
+
+

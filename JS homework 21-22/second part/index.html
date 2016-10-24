@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+	<title>JS homework 13-14 test</title>
+
+    <link rel="stylesheet" type="text/css" href="build/css/main.css">
+
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script>
+
+    <script src="build/js/main.js"></script>
+
+</head>
+
+<body>
+
+    <div class="backwhite">
+
+        <form role="form">
+
+            <div class="form-group">
+
+            <!--template for questions and answers-->
+
+                <script type="text/template" id="test">
+
+                <p class="header">
+
+                    <%- title %>
+
+                </p>
+
+                <ol class="marked">
+
+                    <li class="out">
+
+                    <!--first question-->
+
+                        <p><%- question_1 %></p>
+
+                        <ul class="unmarked">
+
+                    <!--generates the specified number of checkboxes and answers-->
+
+                        <% for (var i = 0; i< inner_li_1.length; i++) { %>
+
+                            <li>
+
+                                <input id="<%- inner_li_1[i].id %>" type="checkbox" name="<%- inner_li_1[i].name %>">
+
+                                <label for="<%- inner_li_1[i].for %>"><%- inner_li_1[i].answer %></label>
+
+                            </li>
+
+                        <% }; %>
+
+                        </ul>
+
+                    </li>
+
+                    <li class="out">
+
+                    <!--second question-->
+
+                        <p><%- question_2 %></p>
+
+                        <ul class="unmarked">
+
+                    <!--generator answers-->
+
+                        <% for (var i = 0; i< inner_li_2.length; i++) { %>
+
+                            <li>
+
+                                <input id="<%- inner_li_2[i].id %>" type="checkbox" name="<%- inner_li_2[i].name %>">
+
+                                <label for="<%- inner_li_2[i].for %>"><%- inner_li_2[i].answer %></label>
+
+                            </li>
+
+                        <% }; %>
+
+                        </ul>
+
+                    </li>
+
+                    <li class="out">
+
+                    <!--third question-->
+
+                        <p><%- question_3 %></p>
+
+                        <ul class="unmarked">
+
+                    <!--generator answers-->
+
+                        <% for (var i = 0; i< inner_li_3.length; i++) { %>
+
+                            <li>
+
+                                <input id="<%- inner_li_3[i].id %>" type="checkbox" name="<%- inner_li_3[i].name %>">
+
+                                <label for="<%- inner_li_3[i].for %>"><%- inner_li_3[i].answer %></label>
+
+                            </li>
+
+                        <% }; %>
+
+                        </ul>
+
+                    </li>
+
+                </ol>
+
+                </script>
+
+            <!--end of template-->
+
+            </div>
+
+            <!--button check the answers-->
+
+            <input class="button" type="submit" name="confirm" value="Проверить мои результаты">
+
+        </form>
+
+    </div>
+
+    <!--a modal window with the test results-->
+
+    <div class="modal_wrapper">
+        
+        <p class="result_title">
+            
+           Результаты теста! 
+
+        </p>
+
+        <p class="result"></p>
+
+        <p class="under_result"></p>
+
+        <button class="refresh">
+            
+           <a href="#">OK</a> 
+
+        </button>
+
+    </div>
+
+    <!--end of modal window-->
+
+</body>
+
+</html>
